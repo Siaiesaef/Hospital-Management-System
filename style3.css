@@ -1,0 +1,364 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    /* display: flex; */
+    /* flex-direction: column;
+    min-height: 100vh; */
+    margin: 0;
+    background-color:lightcyan;
+}
+
+.main{
+  margin-top: 60px;
+  margin-left: 200px;
+  padding: 20px;
+  position: relative;
+  flex: 1;
+  padding: 1rem;
+}
+
+.centered-header{
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header {
+    background-color: rgb(5, 165, 5);
+    overflow: hidden;
+    color: black;
+    width: 15%;
+    height: 100vh;
+}
+
+/* Style the submit button */
+button {
+  display: block;
+  width: 50%;
+  padding: 40px 10px;
+  background-color: rgb(5, 165, 5);
+  color: black;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  color: black;
+  margin: 20px auto;
+  font-size: 50px;
+  text-decoration: none;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: darkgrey;
+  color: black;
+}
+
+a{
+    /* font-size: 100px; */
+    text-decoration: none;
+}
+
+.left-link{
+    position: absolute;
+    width: 12%;
+    right: 32%;
+
+    font-size: 100%;
+    text-decoration: underline;
+    color: darkblue;
+
+}
+
+.left-link:hover{
+    color: green;
+}
+
+.right-link{
+    position: absolute;
+    width: 12%;
+    left: 37%;
+
+    font-size: 100%;
+    text-decoration: underline;
+    color: darkblue;
+
+}
+
+.right-link:hover{
+    color: green;
+}
+
+form {
+  /* width: 300px; */
+  width: 25%;
+  height: 25%;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+/* Style all input fields */
+input[type="text"], input[type="number"], input[type="date"], input[type="email"], input[type="submit"] {
+  width: calc(100% - 22px);
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(26, 135, 160);
+  border-radius: 4px;
+}
+
+input[type="submit"]{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(5, 165, 5);
+    border: none;
+    border-radius: 4px;
+    cursor:pointer;
+    color:black;
+}
+
+/* ===== TOP NAVBAR ===== */
+.navbar-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: rgb(5, 165, 5);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  z-index: 1000;
+}
+
+.navbar-top a {
+  color: white;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+.navbar-top a:hover {
+  text-decoration: underline;
+}
+
+/* ===== SIDE NAVBAR ===== */
+.sidebar {
+  position: fixed;
+  top: 60px; /* below top navbar */
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 60px);
+  background-color: rgb(5, 165, 5);
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  margin-top: 60px;   /* space for top navbar */
+  margin-left: 200px; /* space for sidebar */
+  padding: 20px;
+}
+
+/* .navbar-brand {
+   top: 60px;
+  left: 0;
+  width: 200px;
+  height: calc(100vh - 60px);
+  color: white;
+  background-color:rgb(5, 165, 5) ;
+  padding-top: 20px;
+}   */
+
+/* .navbar-brand a{
+  display: block;
+  color: white;
+  text-align: center;
+   text-decoration: none;
+  justify-content: space-evenly;
+}
+
+.navbar-brand a:hover{
+  background-color: #575757;
+} */
+
+/* .navbar-brand-top {
+  background-color:  rgb(5, 165, 5);
+  position: fixed;
+  display: flex;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  text-decoration: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}   */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.header a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* 
+.topnav {
+  height: 60px;
+  background-color: rgb(5, 165, 5);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: white;
+}
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidenav {
+  width: 10%;
+  background-color: rgb(5, 165, 5);
+  min-height: calc(100vh-60px);
+  padding-top: 20px;
+  display: block;
+}
+
+.sidenav a, .dropdown-btn{
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  background: none;
+  border: none;
+  width: 10%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.sidenav a:hover, .drop-btn:hover {
+  background-color:white;
+} */
+
+ /* Table styles */
+ table {
+  width: 30%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  /* min-width: 400px; */
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+  background-color: grey;
+  color: #ffffff;
+  text-align: left;
+}
+
+th {
+  padding: 12px 15px;
+}
+
+td {
+  padding: 12px 15px;
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(26, 135, 160);
+}
+
+.pagination a{
+  display: inline;
+  width:50%;
+  height: 25%;
+  background: rgb(26, 135, 160);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  line-height: 25px;
+  margin: 0 5px;
+  text-decoration: none;
+  color:#ffffff
+}
+
+.pagination strong {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.pagination{
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+}
